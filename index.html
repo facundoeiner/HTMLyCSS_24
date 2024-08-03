@@ -1,0 +1,493 @@
+<!DOCTYPE htm>
+<html leng="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Resumen</title>
+</head>
+<body>
+    <section>
+    <!-- Debe haber solo un h1 por pagina -->
+    <h1>Encabezados</h1>
+    <p>
+        &lt;h1&gt;&lt;/h1&gt; 
+        Debe haber solo un h1 por pagina. 
+        Pero los elementos h2 hasta h6 se pueden usara mas de una vez.
+    </p>
+    </section>
+    <!-- lista ordenada -->
+<section>
+    <h2>lista ordenada</h2>
+   
+    <h3> &lt;ol&gt;&lt;/ol&gt; </h3>
+    <ol>
+        <li>ordenada</li>
+        <li>ordenada</li>
+        <li>ordenada</li>
+
+    </ol>
+
+    <p>Dentro del elmento ol va el elemento li para marcar los items <br>
+        &lt;ol&gt;<br>&lt;li&gt;items&lt;/li&gt; <br>&lt;/ol&gt;
+    </p>
+</section>
+<section>
+    <!-- lista desordenada-->
+    <h2>lista desordenada</h2>
+    <h3>&lt;ul&gt;&lt;/ul&gt;</h3>
+    <ul>
+        <li>desordenada</li>
+        <li>desordenada</li>
+        <li>desordenada</li>
+    </ul>
+    <h4>&lt;li&gt;&lt;/li&gt;</h4>
+    <p>Dentro del elmento ul va el elemento li para marcar los items <br>
+        &lt;ul&gt;<br>&lt;li&gt;items&lt;/li&gt; <br>&lt;/ul&gt;
+    </p>
+</section>
+<section>
+    <!-- Enlaces-->
+     <h2>Enlaces</h2>
+     <h3>&lt;a&gt;&lt;/a&gt;</h3>
+     <p>La etiqueta a en HTML se usa para crear enlaces (hipervínculos) que permiten a los usuarios navegar a otras páginas web, recursos, o ubicaciones dentro de la misma página. Es uno de los elementos fundamentales de la web que permite la navegación entre documentos.</p>
+     <h3>Atributos</h3>
+     <p>Tiene como atributo el href="direccion de la siguiente pagina web"</p>
+     <p>
+        Tambien la etiqueta a tiene como atributo target="_blank" y este va abrir la pagina en otra pestania.<br>
+        target="_self" es le valor por defecto, no abre otra pestania.
+        <br>&lt;a href="direccion de la siguiente pagina web" target="_blank"&gt;&lt;/a&gt;
+    </p>
+     
+     <a href="/enlaces/enlace_1.html" target="_blank">pagina 1</a>
+</section>
+<section>
+  <!-- imagenes -->
+   
+  <h2>Imagenes y sus atributos</h2>
+  <h3> &lt;img&gt; </h3>
+  <p>Es una etiqueta de auto cierre</p>
+  <br>
+  <h3>Atributos</h3>
+  <p>La etiqueta img tiene dos atributos importantes src="direccion de donde esta almacenada la imagen"  y alt="descripcion de la imagen"</p> <br>
+  <p>Por ejemplo: <br>
+  src="imagen_1.png" alt="Messi besando la copa del mundo"
+  <br>&lt;img src="imagen_1.png" alt="Messi besando la copa del mundo"&gt; 
+</p>
+
+<img src="/img/imagen_1.png" alt="Messi besando la copa del mundo">
+</section>
+<!-- Acceder a archivos que estan en otra carpaeta o rutas distintas -->
+<section>
+<h2>Rutas</h2>
+<h3>Tipos de rutas</h3>
+<p>Hay dos tipos de rutas las <b>Ambsolutas</b> y las <b> Relativas</b></p>
+</body>
+<h3>Absolutas</h3>
+<p>
+    Son los enlaces prinsipale y son que va a estar siempre ahi.
+    direcciones que no impota de donde entremos siempre va ser lo mismo.
+</p>
+<h3>Relativas</h3>
+<p>
+    Son anlances que depende de donde estan los archivos, se llaman de distintas maneras. <br>
+    por ejemplo: si tengo dentro de la carpeta mi web, otra carpeta img 
+    donde guardo todas las imagenes que voy a usar en mi web, entoces no puedeo usar el atributode src="imagen_1" 
+    por que el archibo html y el archibo de imagen estan en distintas rutas/ carpetas.
+    <br> por ejemplo:
+    carpeta  : <br> <h4>mi web</h4>
+    <ul> 
+        <li>archibo.html</li>
+        <li>carpeta img  :  <ul>
+            <li>imagen_1</li>
+        </ul></li>
+    </ul>
+    En toces hay dos maeneras de acceder a "hacia adentro " o "hacia afuera "
+    que este final seria intentar acceder a un elmento que esta por afuera de la carpeta en la que estamos.
+    <h4>acceder hacia adentro: de archivo.html a carpeta img a imagen_1 :</h4>
+    se utiliza la barra / : src="img/imagen_1.png" <br>
+    img/: dentro de la carpeta imga busca la imagen , nombre de imagen.
+    <h4>acceder hacia afuera de una carpeta</h4>
+    si queremos acceder a un archivo que esta por afuera de nuestra carpeta utilizamos el "../archiboQueSeBusca"
+    src="../video_1.mp4" 
+
+</p>
+</section>
+<section>
+<!-- Formularios -->
+<h2>Formulario</h2>
+<h3> &lt;form&gt;&lt;/form&gt; </h3>
+<p>Estas etoquetas se usan para pedir informacion al usuario.</p>
+<br>
+<p>Cada formulario inicia dentro de una etiqueta form. Dentro de esta se puede agregar 
+   los inputs.    
+</p>
+<br>
+<p>
+    La etiqueta input tiene como atributo el TYPE="tipo de input" ,
+    en este se espesifica que tipo de input va a ser, por ejemplo
+    un input numerico type="number" o input de email input="email"
+    o un input de contrasenia input="password".
+
+</p>
+<h2>Formulario iniciar secion</h2>
+
+<form action="" id="login">
+    <h2>iniciar sesion</h2>
+    <label for="email">Email</label>
+    <input type="email" id="email" placeholder="Facundo@gmail.com">
+    <label for="password">Password</label>
+    <input type="password" id="password" placeholder="***********">
+    <button type="submit">Iniciar sesion</button>
+    <div id="anotherOption">
+        <a href="#">Recuperar contraseña</a>
+        <a href="#">Crear una cuenta</a>
+    </div>
+</form>
+</section>
+<!-- enlazar html y css -->
+<section>
+    <h2>Enlazar <span>(unir)</span> HTML & CSS</h2>
+    <p>Prinsipal mente tenemos 3 maneras de elazar html con css.</p>
+    <h3>Estilo en linea</h3>    
+        <p>Estilos en linea con el atributo style:  &lt;img style="width:20px; heigth:20px"&gt;</p>
+        <p>Se  dice asi ya que los etilos se lo damos directamente a los elementos html  en el archivo html</p>
+        <p>No es recomendado ya que dificulta la lectura del archibo html y no es facil de mantener el codigo</p>
+    <h3> Mediante la etiqueta &lt;style &gt; &lt;/ style &gt;</h3>
+    <p>La etiqueta style se puede poner tanto como en el body como el head, pero se acostumbra a usar en el head.</p>
+    <p> &lt;style &gt; <br>
+            p{
+                color:blue;
+                font-size:20px;   
+            }
+      <br>  &lt;/ style &gt;
+    </p>
+    <p> Aun asi esto no se recomienda ya generalmente hay que escribir muchas lineas de css 
+        para poder estilar.
+    </p>
+    <h3>Archivo externo.css</h3>
+    <p>Se utiliza la etiqueta &lt;link&gt;, esta va solo en el head de nuesto html.</p>
+    <p>Esta etiqueta tiene  2 atributos necesario </p>
+    <p>rel="tipoDeArchibo", en este caso stylesheet </p>
+    <p>href="direccionDelArchivo.css"  la direccion donde se aloja el archivo css</p>
+    <p> &lt;link rel="stylesheet" href="styles.css"&gt;</p>
+</section>
+<!-- selectores -->
+<section>
+    <h2>selectores en css</h2>
+    <p>Los selecores son la manera de selecionar uno o varios elementos html en css, esto para darle estilos</p>
+    <h3>Selector por elemento</h3>
+    <p>Este seleciona un tipo de etiqueta simplemente, por ejemplo si selecionamos la etiqueta 
+        &lt;p; en css seria:
+
+    </p>
+    <p>p{ propiedad:estilo}</p>
+    <p>Esto dice que para todo elmento p del archivo html se le van a aplicar estos estilos</p>
+    <h3>Selector por Clases</h3>
+
+    <p>Cuando agregamos una clase al  una tiqueta html y luego seleccionamos esta clase desde css, solo 
+        se van a modificar los elemento que pertenezcan esta clase.
+    </p>
+    <p>Por ejemplo  &lt;p class="nombre" &gt </p>
+    <p>Seleccionamos en css por clase:</p>
+    <p>.nombre{
+        color:red;    
+    }</p>
+  
+
+    <p>Entonces este estilo que le dimos a la clase nombre va a modificar solo a aquellos elementos que tengan la dicha clase</p>
+   <p>ejemplo</p>
+    <p>  &lt;p clase="nombre"&gt; Sara  &lt;/p &gt;
+    &lt;p&gt; es super buena persona  &lt;/p &gt;</p>
+    <p class="nombre">Sara</p>
+    <p>es super buena persona</p>
+    <h3>Selector por id</h3>
+    <p>Para selecionar a un elmento html desde css por su id, solo demo usar el #id. 
+        Recuerda que los id son unicos, un elemento debe tener unico id.
+    </p>
+    <p>ejemplo: <br>
+        #nombre{
+            color: blue;
+        }
+    </p>
+</section>
+<!-- modelo de caja -->
+<section>
+    <h2> Modelo de caja (box model)</h2>
+    <p>
+        El Box Model en HTML y CSS es un concepto fundamental que define cómo los elementos de una página web son representados y espaciados en el diseño visual. Cada elemento de bloque en HTML se representa como una caja rectangular que está compuesta por cuatro áreas:
+
+        Contenido (Content): Esta es la parte donde se muestra el contenido real del elemento (texto, imágenes, etc.). Es el área interna de la caja.
+        
+        Relleno (Padding): Este es el espacio entre el contenido del elemento y su borde. El padding se puede ajustar individualmente para los lados superior, derecho, inferior e izquierdo.
+        
+        Borde (Border): El borde envuelve el contenido y el relleno del elemento. Puede tener diferentes estilos (sólido, punteado, etc.), grosores y colores.
+        
+        Margen (Margin): Es el espacio fuera del borde del elemento. Se utiliza para crear separación entre este elemento y los demás elementos circundantes.
+    </p>
+
+    <img src="img/boxModel.jpeg"  alt=" Modelo de caja">
+    <div class="contendor-box">
+        <div class="box-model">
+            <div class="box"id="box1">contenido</div>
+            <div class="box"id="box2">contenido</div>
+            <div class="box"id="box3">contenido</div>
+        </div>
+        <label for="margin">Margin</label>
+        <input type="range"id="margin" min="0" max="50">
+        <label for="padding">Padding</label>  
+        <input type="range"id="padding" min="0" max="50">  
+        <label for="border">Border</label>
+        <input type="range"id="border" min="0" max="50">   
+        <label for="box-models"> box-sizing</label>
+        <select name="box-model" id="box-models">
+            <option value=""></option>
+            <option value="border-box">border-box</option>
+            <option value="content-box">content-box</option>
+        </select>
+    </div>
+</section>
+<!-- Tamaño de caja (box sizing) -->
+<section>
+    <h2>Tamaño de caja (box sizing)</h2>
+    <p>
+        La propiedad box-sizing en CSS define cómo se calcula el tamaño total de un elemento (ancho y alto) incluyendo el contenido, el relleno (padding) y el borde (border).       
+    </p>
+    <h3>box-sizing tiene 2 propiedades prinsipales</h3>
+    <p><span>contendor-box:</span> (valor por defecto)<br>
+        Solo el contenido del elemento se incluye en el ancho y alto especificados. El relleno y el borde se añaden fuera de esas dimensiones.
+        Ejemplo: Si defines un ancho de 200px y añades 20px de relleno y 10px de borde, el tamaño total será 200px (contenido) + 40px (relleno) + 20px (borde) = 260px.
+    </p>
+    <p>
+        <span>border-box:</span> <br>
+        El ancho y alto especificados incluyen el contenido, el relleno y el borde. El relleno y el borde se restan del tamaño total del contenido.
+        Ejemplo: Si defines un ancho de 200px y añades 20px de relleno y 10px de borde, el tamaño total seguirá siendo 200px, con el contenido ajustado automáticamente para acomodar el relleno y el borde dentro de esos 200px.
+    </p>
+    <h3>Ejemplo</h3>
+    <p>Definimos un div con un tamaño de 100px.
+       Un padding de 10px, borde de 10px.
+    </p>
+    <div class="ejemplo-box-sizing">
+        <div class="box-sizing">
+           contenido
+        </div>
+        <label for="box-tamanio">box-sizing</label>
+        <select name="box-sizing" id="box-tamanio">
+            <option value="content-box">content-box</option>
+            <option value="border-box">border-box</option>
+        </select>
+        <p class="respuesta">tamanio de la caja: <samp class="sizing"><b>120px</b></samp> </p>
+    </div>
+</section>
+<!-- Colores -->
+<section>
+    <h2>Colores</h2>
+    <h3>Exadecimal</h3>
+    <p>
+        Es un sistema que tiene 16 posibilidades #<span class="ex-rojo">EE</span><samp class="ex-verde">09</samp><samp class="ex-azul">FF</samp>. 
+        Aquí, cada par de dígitos hexadecimales representa un componente del color en el formato #RRGGBB: 
+        <span class="ex-rojo">EE</span> (rojo), <samp class="ex-verde">09</samp> (verde), <samp class="ex-azul">FF</samp> (azul).
+        <br>#00-00-00 cada uno de estos pueden tomar cualquier valor entre 0 y F.
+    </p>
+    <p>
+        <span class="ex-rojo">EE</span> La primera 'E' es más importante que la segunda, ya que determina una mayor intensidad del color rojo. 
+        Cada una de estas letras selecciona un tono específico de rojo, siendo 'EE' un valor muy alto cercano al máximo.
+    </p>
+    <p>
+        <samp class="ex-verde">09</samp> La primera cifra o letra es más importante. 
+        En este caso, el '0' tiene más peso en determinar el tono verde. 
+        Los valores más bajos (como '0') resultan en tonos más oscuros de verde.
+    </p>
+    <p>
+        <samp class="ex-azul">FF</samp> La primera letra elige el tono más importante. 
+        'FF' es el valor máximo en hexadecimal, lo que significa que este es el tono azul más brillante posible.
+    </p>
+    
+
+    <div class="exadecimal">
+     
+        <div class="cont-select">   #
+        <select name="" id="exaRojo1">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+            <option value="D">D</option>
+            <option value="E">E</option>
+            <option value="F">F</option>
+        </select>
+        <select name="" id="exaRojo2">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+            <option value="D">D</option>
+            <option value="E">E</option>
+            <option value="F">F</option>
+        </select>
+        <select name="" id="exaVerde1">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+            <option value="D">D</option>
+            <option value="E">E</option>
+            <option value="F">F</option>
+        </select>
+        <select name="" id="exaVerde2">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+            <option value="D">D</option>
+            <option value="E">E</option>
+            <option value="F">F</option>
+        </select>
+        <select name="" id="exaAzul1">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+            <option value="D">D</option>
+            <option value="E">E</option>
+            <option value="F">F</option>
+        </select>
+        <select name="" id="exaAzul2">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+            <option value="D">D</option>
+            <option value="E">E</option>
+            <option value="F">F</option>
+        </select>
+    </div>
+        <div class="colorear" id="">
+            <h4 id="h4Colorear">colorear</h4>
+        </div>
+        <button class="copiarColor">Copiar al porta papeles</button>
+    </div>
+</section>
+<!-- Medidas -->
+ <section>
+    <h2>Medidas</h2>
+    <h3>Medida Absolutas</h3>
+    <p>
+        Centimetros: cm. <br>
+        Milimetros: ml. <br>
+        pulgadas: in.<br>
+        pixeles: px. <br>
+        Estas medidas se utilizan cuando se quiere utilizar en la vida real, como 
+        por ejemplo, Imprimir un texto que tenemos.
+        Por ejemplo a este texto le damos un padding de 10cm, entoces al imprimir 
+        este va a salir con un padding de 10 cm .
+    </p>
+    <h3>Medias Relativas</h3>
+    <p>
+        La medidas relativas se llaman asi porque son relativas a algo mas.
+        Por ejemplo el uso de la medida de %, este se refiere siempre a  una caja a la 
+        que se hace referencia.
+        PJ
+        Tenemos una caja de  padre de 100px  y una su hija con un width de 50% y un 
+        height de 50%, el 100% de la caja hija va a ser de 100px
+
+
+        Estas se llaman asi ya que  deben hacer referencia a algo mas.
+        Por ejemplo el  Porcentaje (%), si Definimos  una caja con el width: 50% y el height:50% 
+        esta caja va a tomar como referencia a su caja padre. Si la caja padre tiene
+        un width: 100px y un heigth:100px, entocesla caja hija va a tener una medida en pixeles de width: 50px y height:50px.
+
+    </p>
+    <p><b>Ejemplo</b>: <br>
+        Definimos una caja padre con las siguiente medidas : width:100px y heigth:100px.
+    </p>
+    <div class="contMedidas">
+        <h4 style="text-align: center; margin:10px 0 ;">Caja Padre</h4>
+        <div class="padre" id="newMedidasPadre">
+            <div id="cajaHijo">hijo</div>
+        </div>
+        <label for="medidasPor" class="label">Porsentaje 0 a 100%</label>
+        <input type="range" min="0" max="100" id="medidasPor">
+        <p class="porcentaje" id="porcentaje">50%</p>
+        <div class="oculto" id="oculto">
+            <h5 style="margin:5px 0;">Tamanio en px de la caja Padre</h5>
+            <div class="oculto-inputs">
+                <label for="anchoPadre">width:</label>
+                <input type="number" id="anchoPadre" min="0" max="300">
+                <label for="lagoPadre">height:</label>
+                <input type="number" id="lagoPadre" min="0" max="300">
+            </div>
+        </div>
+    </div>
+
+    <p>
+        Lo bueno de usar medidas relaticas es que estas se adaptan a la 
+        medida del contendor.
+        Por ejemplo si ahora queremos cambiar la medida de contendor padre
+        esta seguiria sindo el 50%. <br> <label for="padre">Provar nuevas medias en el contnedor padre</label>
+        <input type="checkbox"id="padre">
+    </p>
+    <h3>r</h3>
+    <p>
+
+    </p>
+</section>
+<script src="js/app.js"></script>
+<script src="js/exadecimal.js"></script>
+<script src="js/medidas.js"></script>
+</html>
+
